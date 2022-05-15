@@ -3,7 +3,7 @@
 - [x] Prettier
 - [x] Eslint
 - [x] Husky
-- [ ] Absolute imports
+- [x] Absolute imports
 - [ ] Env vars
 - [ ] TS Codegen from API definitions
 
@@ -87,6 +87,24 @@ Edit `package.json` to add `lint-staged` stuff. Only STAGED (and filtered) files
     ]
   },
 ```
+
+## Absolute imports
+
+Read this
+(https://javascript.plainenglish.io/why-and-how-to-use-absolute-imports-in-react-d5b52f24d53c)
+to understand the need for absolute imports
+
+Add the following line to `tsconfig.json`, under `compilerOptions`
+
+```json
+ "compilerOptions": {
+    ... existing options
+    "baseUrl": "./"
+  },
+```
+
+Now you can refer to the components directory as `src/components` (absolute)
+instead of `./components` (relative)
 
 ## References
 
