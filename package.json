@@ -21,13 +21,14 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "lint": "eslint --fix",
+    "lint": "eslint --ignore-path .gitignore",
+    "lint:fix": "npm run lint -- --fix",
     "pretty": "prettier --write .",
     "prepare": "husky install"
   },
   "lint-staged": {
     "src/**/*.{js,jsx,ts,tsx,json,css,scss,md}": [
-      "yarn lint",
+      "yarn lint:fix",
       "prettier --write --ignore-unknown"
     ]
   },
